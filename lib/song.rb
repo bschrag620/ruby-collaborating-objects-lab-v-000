@@ -4,5 +4,8 @@ class Song
   def initialize(name)
     @name = name
   end
-  
+
+  def new_by_filename(file_name)
+    no_ext = file_name.chomp('.mp3')
+    Song.new(no_ext)
 end
