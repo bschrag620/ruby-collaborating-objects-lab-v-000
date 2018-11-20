@@ -15,5 +15,6 @@ class MP3Importer
       file_name = parts[-1]
       @@all << file_name
     end
+    @@all
   end
 end
