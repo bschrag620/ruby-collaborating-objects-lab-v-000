@@ -11,7 +11,9 @@ class MP3Importer
     path = @path + '/*.mp3'
     file_list = Dir[path]
     file_list.each do |file|
-      @@all << file
+      parts = file.split('/')
+      file_name = parts[-1]
+      @@all << file_name
     end
   end
 end
