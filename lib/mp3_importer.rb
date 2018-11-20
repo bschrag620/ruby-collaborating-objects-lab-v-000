@@ -17,4 +17,10 @@ class MP3Importer
     end
     @@all
   end
+
+  def import
+    @@all.collect do |file_name|
+      Song.new(file_name)
+    end
+  end
 end
